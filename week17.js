@@ -9,7 +9,6 @@ class Worker {
 		this.surname = surname
 	}
 	fullName() {
-		console.log(this.name, this.surname);
 		return `Полное имя работника: ${this.surname}, ${this.name}`
 	}
 }
@@ -98,7 +97,7 @@ class Circle {
 		return squareCircle
 	}
 }
-const circle = new Circle('circle');
+const circle = new Circle(10);
 console.log(circle);
 
 //Задание 8
@@ -276,24 +275,28 @@ console.log(point2.getDistance());
 
 //Ваш код
 class Calculator {
-	add() {
-
+	add(a, b) {
+		return a + b
 	}
-	subtract() {
-
+	subtract(a, b) {
+		return a - b
 	}
-	multiply() {
-
+	multiply(a, b) {
+		return a * b
 	}
-	divide() {
-
+	divide(a, b) {
+		if (b === 0) {
+			return "Ошибка, делить на ноль нельзя"
+		} return a / b
 	}
 }
 const calculator = new Calculator();
-console.log(calculator.add());
-console.log(calculator.subtract());
-console.log(calculator.multiply());
-console.log(calculator.divide());
+const a = 10;
+const b = 5;
+console.log(`результат сложения равен: ${calculator.add(a, b)}`);
+console.log(`результат вычитания равен: ${calculator.subtract(a, b)}`);
+console.log(`результат умножения равен: ${calculator.multiply(a, b)}`);
+console.log(`результат деления равен: ${calculator.divide(a, b)}`);
 
 //Задание 21
 //Создайте класс Person. Класс должен содержать свойства name, age и city. Создайте на его основе объект person и выведите его свойства в консоль.
@@ -334,7 +337,7 @@ class Employee {
 		this.salary = salary
 	}
 	calculateBonus(bonus) {
-		this.salary += bonus
+		this.salary += (this.salary * bonus) / 100;
 	}
 }
 const employee = new Employee('Petr', 'manager', 80000);
@@ -347,8 +350,8 @@ console.log(employee);
 
 //Ваш код
 const employee2 = new Employee('Petr', 'manager', 80000);
-employee2.calculateBonus(100);
-console.log(employee2.salary);
+employee.calculateBonus.call(employee2, 20);
+console.log(`Новая зарплата сотрудника: ${employee2.salary}`);
 
 
 //Задание 25

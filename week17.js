@@ -3,29 +3,29 @@
 // Подсказка: имена классов пишем с большой буквы
 
 //Ваш код
-class Worker {
-	constructor(name, surname) {
-		this.name = name;
-		this.surname = surname
-	}
-	fullName() {
-		return `Полное имя работника: ${this.surname}, ${this.name}`
-	}
-}
-//Создаём объекта на основе класса Worker
-const worker = new Worker('Имя', 'Фамилия');
-//Выводим созданный объект в консоль
-console.log(worker);
+// class Worker {
+// 	constructor(name, surname) {
+// 		this.name = name;
+// 		this.surname = surname
+// 	}
+// 	fullName() {
+// 		return `Полное имя работника: ${this.surname}, ${this.name}`
+// 	}
+// }
+// //Создаём объекта на основе класса Worker
+// const worker = new Worker('Имя', 'Фамилия');
+// //Выводим созданный объект в консоль
+// console.log(worker);
 
 //Задание 2
 //Добавьте в класс Worker метод fullName, который будет возвращать полное имя работника в формате "Фамилия, Имя". Создайте объект worker2 на основе класса Worker и выведите его полное имя в консоль с помощью метода fullName
 
 //Ваш код
 
-//Создаём объект worker2 на основе класса Worker
-const worker2 = new Worker('Имя', 'Фамилия');
-//Выводим полное имя объекта worker2 в консоль с помощью метода fullName
-console.log(worker2.fullName());
+// //Создаём объект worker2 на основе класса Worker
+// const worker2 = new Worker('Имя', 'Фамилия');
+// //Выводим полное имя объекта worker2 в консоль с помощью метода fullName
+// console.log(worker2.fullName());
 
 //Задание 3
 //Создайте класс Car. Класс должен содержать свойства brand, model и year. Создайте на его основе объект car и выведите его свойства в консоль.
@@ -112,27 +112,27 @@ console.log(circle2.calculateArea());
 //Создайте класс Student. Класс должен содержать свойства name, age и grade. Создайте на его основе объект student и выведите его свойства в консоль.
 
 //Ваш код
-class Student {
-	constructor(name, age, grade) {
-		this.name = name;
-		this.age = age;
-		this.grade = grade
-	}
-	increaseGrade() {
-		const gradeUp = this.grade + 1;
-		return gradeUp
-	}
-}
-const student = new Student('Ann', 18, 5)
-console.log(student);
+// class Student {
+// 	constructor(name, age, grade) {
+// 		this.name = name;
+// 		this.age = age;
+// 		this.grade = grade
+// 	}
+// 	increaseGrade() {
+// 		const gradeUp = this.grade + 1;
+// 		return gradeUp
+// 	}
+// }
+// const student = new Student('Ann', 18, 5)
+// console.log(student);
 
 
 //Задание 10
 //Добавьте в класс Student метод increaseGrade, который будет увеличивать текущую оценку на 1. Создайте объект student2 на основе класса Student, увеличьте его оценку с помощью метода increaseGrade и выведите новую оценку в консоль.
 
 //Ваш код
-const student2 = new Student('Alice', 20, 3);
-console.log(student2.increaseGrade());
+// const student2 = new Student('Alice', 20, 3);
+// console.log(student2.increaseGrade());
 
 
 
@@ -220,6 +220,7 @@ class Animal {
 		this.sound = sound
 	}
 	makeSound() {
+		console.log(`${this.sound}`);
 		return `Звук ${this.name} - это ${this.sound}`
 	}
 }
@@ -320,7 +321,7 @@ console.log(person);
 //Добавьте в класс Person метод changeCity, который будет изменять значение свойства city на новое значение. Создайте объект person2 на основе класса Person, вызовите метод changeCity с аргументом "New York" и выведите новое значение свойства city в консоль.
 
 //Ваш код
-const person2 = new Person();
+const person2 = new Person('Sam', 15, 'Omsk');
 person2.changeCity('New York');
 console.log(person2.city);
 
@@ -434,3 +435,63 @@ console.log(square);
 const square2 = new Square(6);
 const result = square2.calculateArea();
 console.log(`Площадь квадрата: ${result}`);
+
+
+
+// class Person {
+// 	constructor(name, age) {
+// 		this.name = name;
+// 		this.age = age;
+// 	}
+
+// 	introduce() {
+// 		console.log(`Hi, my name is ${this.name} and I'm ${this.age} years old.`);
+// 	}
+// }
+
+// class Student extends Person {
+// 	constructor(name, age, major) {
+// 		super(name, age);
+// 		this.major = major;
+// 	}
+
+// 	study() {
+// 		console.log(`I'm studying ${this.major}.`);
+// 	}
+// }
+
+// const person = new Person("John", 25);
+// const student = new Student("Alice", 20, "Computer Science");
+// person.introduce()
+
+// // const introduceFunc = person.introduce;
+// // introduceFunc(); //?
+
+
+// class Person {
+// 	constructor(name, age) {
+// 		this.name = name;
+// 		this.age = age;
+// 	}
+
+// 	introduce() {
+// 		console.log(`Hi, my name is ${this.name} and I'm ${this.age} years old.`);
+// 	}
+// }
+
+// class Student extends Person {
+// 	constructor(name, age, major) {
+// 		super(name, age);
+// 		this.major = major;
+// 	}
+
+// 	study() {
+// 		console.log(`I'm studying ${this.major}.`);
+// 	}
+// }
+
+// const person = new Person("John", 25);
+// const student = new Student("Alice", 20, "Computer Science");
+
+// const introduceFunc = person.introduce;
+// introduceFunc(); //?
